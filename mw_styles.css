@@ -13,16 +13,104 @@
 
 */
 /* Structural Styles */
+/* Sets up background color of HTML page and Body section, as well as footer. Sets the base font for the Bodies text. */
 html {
     background-color: rgb(173, 189, 227);
 }
 
 body {
     background-color: rgb(227, 210, 173);
+    font-family: ‘Century Gothic’, sans-serif;
+}
+
+body>footer {
+    background-color: rgb(208, 184, 109);
+    padding: 5px 0px;
+}
+
+/* Step 7, causes the text inside the address to center, changes font size, changes style to normal, and gives it padding. */
+address {
+    font-style: normal;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 10px 0px;
 }
 
 /* Heading Styles */
+/* Step 8, sets all heading1's and heading2's to normal text, getting rid of the emboldening. */
+h1,
+h2 {
+    font-weight: normal;
+}
+
 /* Navigation Styles */
+/* Step 9, gets rid of the markers next to unordered lists, sets the font size and puts spacing between each link in the Nav. */
+nav>ul {
+    list-style-type: none;
+    font-size: 0.9em;
+    line-height: 2em;
+}
+
+/* Step 10/11, using dynamic pseudo-classes it changes the color of the links if they've been visited or not and if hovered over they will be red. */
+nav a:visited,
+nav a:link {
+    text-decoration: none;
+    color: rgb(43, 59, 125);
+}
+
+nav a:hover,
+nav a:active {
+    color: rgb(212, 35, 35);
+}
+
 /* Article Styles */
+/* Step 12,13,14 edits the tour_summary articles heading, paragraphs and the first paragraphs first line of text using ID's and psuedo class elements. */
+article#tour_summary h1 {
+    font-size: 2.2em;
+    letter-spacing: 0.2em;
+}
+
+article#tour_summary p {
+    font-size: 1.1em;
+}
+
+article#tour_summary p:first-of-type:first-line {
+    font-size: 1.2em;
+    font-variant: small-caps;
+}
+
 /* Aside Styles */
+aside#tour_itinerary>h1 {
+    font-size: 1.2em;
+}
+
+aside#tour_itinerary>h2 {
+    font-size: 0.9em;
+}
+
+aside#tour_itinerary>p {
+    font-size: 0.8em;
+}
+
+/* Day Schedule */
+/* Step 18 a,b. Sets up the day schedule with alternating text colors according to even/odd pseudo classes. */
+aside#tour_itinerary>h2:nth-of-type(odd),
+aside#tour_itinerary>p:nth-of-type(odd) {
+    color: rgb(79, 91, 40);
+}
+
+aside#tour_itinerary>h2:nth-of-type(even),
+aside#tour_itinerary>p:nth-of-type(even) {
+    color: rgb(81, 95, 175);
+}
+
 /* Blockquote Styles */
+/* Step 19,20, sets up blockquotes with background color and text color as well as padding. */
+blockquote {
+    background-color: rgb(173, 189, 227);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+blockquote p {
+    padding: 2.5px 10px;
+}
